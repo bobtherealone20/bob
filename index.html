@@ -3,32 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crank the Bob</title>
+    <title>Best Burgers</title>
     <style>
         body {
-            text-align: center;
             font-family: Arial, sans-serif;
-            margin: 50px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff4500;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .burger {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
         }
         img {
-            width: 300px;
-            transition: opacity 0.3s ease;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .order-btn {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h2>Crank the Bob</h2>
-    <input type="range" min="0" max="100" value="100" id="slider">
-    <br><br>
-    <img src="https://cdn-images.dzcdn.net/images/artist/77220ccb5a36d0e5df2c9e47f2c89de4/500x500-000000-80-0-0.jpg" id="image" alt="Bob">
-
-    <script>
-        const slider = document.getElementById('slider');
-        const image = document.getElementById('image');
-
-        slider.addEventListener('input', function() {
-            image.style.opacity = slider.value / 100;
-        });
-    </script>
+    <header>Best Burgers</header>
+    <h2>Our Menu</h2>
+    <div class="menu">
+        <div class="burger">
+            <img src="https://via.placeholder.com/250" alt="Classic Burger">
+            <h3>Classic Burger</h3>
+            <p>Juicy beef patty, fresh lettuce, tomato, and cheese.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+        <div class="burger">
+            <img src="https://via.placeholder.com/250" alt="Cheese Burger">
+            <h3>Cheese Burger</h3>
+            <p>Loaded with extra cheese and fresh toppings.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+        <div class="burger">
+            <img src="https://via.placeholder.com/250" alt="Veggie Burger">
+            <h3>Veggie Burger</h3>
+            <p>A delicious plant-based alternative.</p>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </div>
 </body>
 </html>
